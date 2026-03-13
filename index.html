@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Laura Oliveira | Cloud Portfolio</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.links{
+margin-top:25px;
+}
+
+.links a{
+display:inline-block;
+margin:10px;
+padding:10px 18px;
+border-radius:6px;
+background:#FF9900;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.links a:hover{
+background:#e68900;
+transform:translateY(-2px);
+}
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f6f9;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:#232F3E;
+color:white;
+text-align:center;
+padding:60px;
+animation:fadeDown 1s ease;
+}
+
+header h1{
+margin:0;
+font-size:42px;
+}
+
+header p{
+color:#FF9900;
+margin-top:10px;
+font-size:18px;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+padding:50px;
+max-width:800px;
+margin:auto;
+animation:fadeUp 1.2s ease;
+}
+
+.about img{
+width:150px;
+border-radius:100%;
+border:4px solid #FF9900;
+margin-bottom:20px;
+}
+
+/* PROJECTS */
+
+.projects{
+padding:40px;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:50px;
+font-size:30px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+text-align:center;
+position:relative;
+overflow:hidden;
+transition:0.35s;
+animation:fadeUp 1s ease;
+min-height:220px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+text-align:center;
+position:relative;
+overflow:hidden;
+transition:0.35s;
+animation:fadeUp 1s ease;
+}
+
+/* brilho AWS */
+
+.card::before{
+content:"";
+position:absolute;
+top:-100%;
+left:-100%;
+width:200%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,153,0,0.25),
+transparent
+);
+transform:rotate(25deg);
+transition:0.6s;
+}
+
+.card:hover::before{
+top:100%;
+left:100%;
+}
+
+/* hover */
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+
+.card i{
+font-size:42px;
+color:#FF9900;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.card:hover i{
+transform:scale(1.2) rotate(6deg);
+}
+
+/* TEXT */
+
+.card h3{
+color:#232F3E;
+margin-bottom:10px;
+}
+
+.card.future{
+background:#ececec;
+}
+
+/* LINKS */
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* FOOTER */
+
+footer{
+background:#232F3E;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Laura Oliveira</h1>
+
+<p>Cloud Infrastructure | AWS Portfolio</p>
+
+</header>
+
+<section class="about">
+
+    
+
+<img class="foto" src="https://avatars.githubusercontent.com/u/229343354?v=4" alt="Foto da Laura">
+
+<p>
+Profissional em transição para Cloud Computing.
+Estudante do programa AWS re/Start com foco em
+infraestrutura, redes e provisionamento de recursos na AWS.
+</p>
+
+<div class="links">
+
+<a href="https://www.linkedin.com/in/laura--oliveiras" target="_blank">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="https://github.com/laura-oliveira-tech" target="_blank">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+
+</div>
+</section>
+
+<section class="projects">
+
+<h2>Projetos Cloud</h2>
+
+<div class="grid">
+
+<a href="https://github.com/laura-oliveira-tech/aws-cloud-portfolio/tree/main/projeto-01-introducao-ec2">
+<div class="card">
+<i class="fa-solid fa-server"></i>
+<h3>EC2 Web Server</h3>
+<p>Implantação de servidor web com Amazon EC2.</p>
+</div>
+</a>
+
+<a href="https://github.com/laura-oliveira-tech/aws-cloud-portfolio/tree/main/projeto-02-vpc-servidor-web">
+<div class="card">
+<i class="fa-solid fa-network-wired"></i>
+<h3>VPC Network</h3>
+<p>Criação de VPC, subnets e Internet Gateway.</p>
+</div>
+</a>
+
+<a href="https://github.com/laura-oliveira-tech/aws-cloud-portfolio/tree/main/projeto-03-infraestrutura-aws-cli">
+<div class="card">
+<i class="fa-solid fa-terminal"></i>
+<h3>AWS CLI Infrastructure</h3>
+<p>Provisionamento via AWS CLI.</p>
+</div>
+</a>
+
+<div class="card future">
+<i class="fa-solid fa-database"></i>
+<h3>Amazon RDS</h3>
+<p>Projeto em desenvolvimento</p>
+</div>
+
+<div class="card future">
+<i class="fa-solid fa-user-shield"></i>
+<h3>IAM Security</h3>
+<p>Projeto em desenvolvimento</p>
+</div>
+
+<div class="card future">
+<i class="fa-solid fa-cloud"></i>
+<h3>S3 Static Website</h3>
+<p>Projeto em desenvolvimento</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Cloud Portfolio | AWS Projects</p>
+
+</footer>
+
+</body>
+</html>
